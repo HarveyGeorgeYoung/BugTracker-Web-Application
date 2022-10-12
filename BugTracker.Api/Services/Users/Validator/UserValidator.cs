@@ -1,11 +1,12 @@
-﻿using FluentValidation;
+﻿using BugTracker.Api.Models.Users;
+using FluentValidation;
 
-namespace BugTracker.Api.Models.Users
+namespace BugTracker.Api.Services.Users.Validator
 {
     public class UserValidator : AbstractValidator<User>
     {
 
-        public UserValidator() 
+        public UserValidator()
         {
             RuleFor(user => user.Name)
                 .NotEmpty()

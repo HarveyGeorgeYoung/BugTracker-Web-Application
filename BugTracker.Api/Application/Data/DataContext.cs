@@ -1,4 +1,5 @@
 ﻿using BugTracker.Api.Application.Common.Shared;
+using BugTracker.Api.Models.Projects;
 using BugTracker.Api.Models.Users;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace BugTracker.Api.Application.Data
         }
 
         public DbSet<User> Users => Set<User>();
+        public DbSet<Project> Projects => Set<Project>();
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

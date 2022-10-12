@@ -1,4 +1,5 @@
 ﻿using BugTracker.Api.Services.Users;
+using BugTracker.Api.Services.Users.Interfaces;
 
 namespace BugTracker.Api.Application.DependencyInjection
 {
@@ -14,6 +15,7 @@ namespace BugTracker.Api.Application.DependencyInjection
         {
             return services
                 .AddTransient<IAddUserService, AddUserService>()
+                .AddTransient<ISearchUserService, SearchUserService>()
                 .AddTransient<IDeleteUserService, DeleteUserService>();
         }
     }

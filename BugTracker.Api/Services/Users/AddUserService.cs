@@ -1,5 +1,6 @@
 ﻿using BugTracker.Api.Application.Data;
 using BugTracker.Api.Models.Users;
+using BugTracker.Api.Services.Users.Validator;
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

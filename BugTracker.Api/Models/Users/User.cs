@@ -1,4 +1,5 @@
 ﻿using BugTracker.Api.Application.Common.Shared;
+using BugTracker.Api.Models.Projects;
 
 namespace BugTracker.Api.Models.Users
 {
@@ -11,5 +12,7 @@ namespace BugTracker.Api.Models.Users
         public string Email { get; set; } = string.Empty;
 
         public DateTime? DateOfBirth { get; set; }
+
+        public IEnumerable<Project>? Projects { get; set; }
     }
 }
