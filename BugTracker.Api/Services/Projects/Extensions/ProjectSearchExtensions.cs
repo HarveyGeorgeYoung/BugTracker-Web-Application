@@ -2,9 +2,9 @@
 
 namespace BugTracker.Api.Services.Projects.Extensions
 {
-    public static class UserSearchExtensions
+    public static class ProjectSearchExtensions
     {
-        public static IQueryable<Project> WithEmailContaining(this IQueryable<Project> projects, string description)
+        public static IQueryable<Project> WithDescriptionContaining(this IQueryable<Project> projects, string description)
         {
             if (string.IsNullOrEmpty(description))
             {

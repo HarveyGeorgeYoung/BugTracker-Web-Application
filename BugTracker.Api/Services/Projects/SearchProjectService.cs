@@ -19,8 +19,9 @@ namespace BugTracker.Api.Services.Users
         public async Task<List<ProjectDto>> ExecuteAsync(ProjectSearchCommand command)
         {
             return await _context.Projects
-                .WithEmailContaining(command.Email!)
+                .WithDescriptionContaining(command.Description!)
                 .WithNameContaining(command.Name!)
+                .Include(x => x.User)
                 .Select(x => x.ToProjectDto())
                 .ToListAsync();
         }
